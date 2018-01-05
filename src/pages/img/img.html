@@ -1,0 +1,23 @@
+<!--
+  Generated template for the ImgPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>img</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <img [src]="list.url">
+  <button ion-button color="secondary" (click)="sendone()" >Classify</button>
+  <div *ngIf="res">
+    <h1>Results(in probability): </h1>
+    <p>{{res}}</p>
+  </div>
+</ion-content>

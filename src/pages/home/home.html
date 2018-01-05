@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      PerryThePlatypus
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button (click)="takePicture()" >Camera</button>
+  <button ion-button color="secondary" (click)="saved()" >PreSaved Images</button>
+  <ion-item>
+    <ion-label color="primary" floating>Enter IP</ion-label>
+    <ion-input [(ngModel)] = "ip" ></ion-input>
+  </ion-item>
+  <div class="imageBorder" *ngIf="base64Image2">
+    <img [src]="base64Image2" *ngIf="base64Image2">
+  </div>
+  <button ion-button color="secondary" (click)="sendone()" >Classify</button>
+  <div *ngIf="res">
+    <h1>Results(in probability): </h1>
+    <p>{{res}}</p>
+  </div>
+</ion-content>
